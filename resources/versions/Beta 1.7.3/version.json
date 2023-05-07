@@ -1,0 +1,15 @@
+{
+    "name": "Beta 1.7.3",
+    "short_name": "b1.7.3",
+    "entry_point": "net.minecraft.client.Minecraft",
+    "jvm_arguments": "-Dhttp.proxyHost=betacraft.uk -Dhttp.proxyPort=11705 -Djava.util.Arrays.useLegacyMergeSort=true",
+    "classpath": [
+        "resources/versions/Beta 1.7.3/minecraft.jar",
+        "resources/libraries/lwjgl.jar",
+        "resources/libraries/lwjgl_util.jar",
+        "resources/libraries/jinput.jar"
+    ],
+    "natives": {
+        "windows": "resources/natives/windows/"
+    }
+}
