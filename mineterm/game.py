@@ -31,7 +31,7 @@ class Version:
     @property
     def launch_command(self) -> str:
         return LAUNCH_COMMAND.format(
-            natives=self.natives[platform]
+            natives=self.natives[platform],
             classpath=(";" if platform == "windows" else ":").join(self.classpath),
             entry_point=self.entry_point,
         )
@@ -42,7 +42,7 @@ class Version:
             self.launch_command,
             shell=True,
             stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
+            stderr=subprocess.DEVNULL,
         )
 
 
