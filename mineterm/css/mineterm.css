@@ -2,7 +2,7 @@ Screen {
     layout: horizontal;
 }
 
-#search_instance_list {
+#search_instances {
     width: 100%;
     margin: 1 0 0 0;
 }

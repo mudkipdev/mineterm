@@ -25,9 +25,9 @@ class LaunchButton(Button):
         self.mineterm.is_game_launched = True
 
 
-class SearchInstanceList(Input):
+class SearchInstances(Input):
     def __init__(self, mineterm: MineTerm, /) -> None:
-        super().__init__(placeholder="Search", id="search_instance_list")
+        super().__init__(placeholder="Search", id="search_instances")
         self.mineterm = mineterm
 
     def on_input_changed(self, message: Input.Changed) -> None:
@@ -64,12 +64,10 @@ class MineTermApp(App):
     def compose(self) -> ComposeResult:
         with Horizontal():
             with Vertical(id="instances"):
-                yield SearchInstanceList(self.mineterm)
+                yield SearchInstances(self.mineterm)
                 yield InstanceListView(
                     *[
-                        ListItem(
-                            Label(version.short_name), classes="instance"
-                        )
+                        ListItem(Label(version.short_name), classes="instance")
                         for version in VersionManager.versions
                     ],
                     id="instance_list",
