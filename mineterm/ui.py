@@ -68,7 +68,7 @@ class MineTermApp(App):
                 yield InstanceListView(
                     *[
                         ListItem(
-                            Label(version.short_name), classes="instance_list"
+                            Label(version.short_name), classes="instance"
                         )
                         for version in VersionManager.versions
                     ],
