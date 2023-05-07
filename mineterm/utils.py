@@ -1,0 +1,2 @@
+class JavaNotFoundException(Exception):
+    pass

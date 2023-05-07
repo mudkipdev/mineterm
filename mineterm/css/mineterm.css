@@ -1,0 +1,30 @@
+Screen {
+    layout: horizontal;
+}
+
+#search_instance_list {
+    width: 100%;
+    margin: 0 0 2 0;
+}
+
+#instance_list {
+    width: 3fr;
+    height: 100%;
+    margin: 2 2;
+    height: 100%;
+    border: solid lime;
+    overflow-y: auto;
+}
+
+#instance_info {
+    width: 7fr;
+    height: 100%;
+    border: solid blue;
+}
+
+#launch {
+    width: 100%;
+    dock: bottom;
+    background: #0060FF;
+    color: white;
+}
