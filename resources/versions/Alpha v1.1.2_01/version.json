@@ -1,0 +1,15 @@
+{
+    "name": "Alpha v1.1.2_01",
+    "short_name": "a1.1.2_01",
+    "entry_point": "net.minecraft.client.Minecraft",
+    "jvm_arguments": "-Dhttp.proxyHost=betacraft.uk -Dhttp.proxyPort=11702 -Djava.util.Arrays.useLegacyMergeSort=true",
+    "classpath": [
+        "resources/versions/Alpha v1.1.2_01/minecraft.jar",
+        "resources/libraries/lwjgl.jar",
+        "resources/libraries/lwjgl_util.jar",
+        "resources/libraries/jinput.jar"
+    ],
+    "natives": {
+        "windows": "resources/natives/windows/"
+    }
+}
