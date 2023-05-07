@@ -1,3 +1,4 @@
+from typing import Optional
 import os
 import sys
 import json
@@ -28,6 +29,12 @@ class Version:
         self.classpath = data["classpath"]
         self.natives = data["natives"]
 
+    def __str__(self) -> str:
+        return f'<Version name="{self.name}">'
+
+    def __repr__(self) -> str:
+        return self.__str__()
+
     @property
     def launch_command(self) -> str:
         return LAUNCH_COMMAND.format(
@@ -37,7 +44,6 @@ class Version:
         )
 
     def launch(self) -> None:
-        print(self.launch_command)
         process = subprocess.Popen(
             self.launch_command,
             shell=True,
@@ -57,6 +63,12 @@ class VersionManager:
                     VersionManager.versions.append(Version(json.load(version_file)))
             except FileNotFoundError as exception:
                 print(f'Tried to load invalid version "{version_directory}"')
+
+    @staticmethod
+    def get_version_from_short_name(short_name: str, /) -> Optional[Version]:
+        for version in VersionManager.versions:
+            if version.short_name == short_name:
+                return short_name
 
 
 VersionManager.load_versions(VERSIONS_PATH)

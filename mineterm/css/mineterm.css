@@ -4,16 +4,22 @@ Screen {
 
 #search_instance_list {
     width: 100%;
-    margin: 0 0 2 0;
+    margin: 1 0 0 0;
+}
+
+#instances {
+    width: 3fr;
+    height: 100%;
+    height: 100%;
+    overflow-y: auto;
 }
 
 #instance_list {
-    width: 3fr;
-    height: 100%;
-    margin: 2 2;
-    height: 100%;
     border: solid lime;
-    overflow-y: auto;
+}
+
+.instance {
+    padding: 1;
 }
 
 #instance_info {
